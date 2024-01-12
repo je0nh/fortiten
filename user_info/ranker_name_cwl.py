@@ -111,19 +111,19 @@ for user_ouid in user_ouids:
 # To many rquest로 dict가 list에 들어가는거 방지
 matches = [item for item in matches if not isinstance(item, dict)]
 
+matches = sum(matches, [])
+
 # 저장
 user_match_file_path = "./data/user_match.txt"
 save_file(user_match_file_path, matches)
 
 # 매치 정보 가져오기
-_match_details = []
+match_details = []
 for match_id in matches:
     match_record_detail_urlString = f"https://open.api.nexon.com/fconline/v1/match-detail?matchid={match_id}"
     match_record_detail_response = requests.get(match_record_detail_urlString, headers = headers)
     match_detail = match_record_detail_response.json()
-    _match_details.append(match_detail)
-
-match_details = sum(_match_details, [])
+    match_details.append(match_detail)
 
 # 저장
 match_details_file_path = "./data/match_detail.txt"
