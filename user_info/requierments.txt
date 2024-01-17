@@ -1,0 +1,5 @@
+selenium==4.16.0
+requests==2.31.0
+pandas==2.1.4
+tqdm==4.66.1
+pyarrow==14.0.2
