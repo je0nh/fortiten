@@ -39,7 +39,9 @@ current_iter = 0
 total_iter = 50
 
 while current_iter < total_iter:
+    time.sleep(1)
     for i in range(2, 12):
+        time.sleep(1)
         # 요소를 찾을때 까지 대키
         user_info_wait = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="inner"]/div[1]/div/div[2]')))
         WebDriverWait(user_info_wait, 10).until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'tr')))
