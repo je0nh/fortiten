@@ -4,7 +4,7 @@
 
 ## 프로젝트 개요
 
-- NEXON Open api를 사용한 데이터 분석 및 AI를 활용 웹서비스 mvp 제작
+- NEXON Open api를 사용한 데이터 분석 및 AI 활용 웹서비스 mvp 제작
 
 ## 팀원
 
