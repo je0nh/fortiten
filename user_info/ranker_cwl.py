@@ -113,4 +113,4 @@ df = pd.DataFrame({
 
 df['korRankTier'] = df['tier'].map(kor_rank_dict)
 df = df.dropna()
-df.to_parquet(f'./data/{cur_time}_user_info.parquet', engine='pyarrow', index=False)
+df.to_parquet(f'/home/mark/fortiten/data/{cur_time}_user_info.parquet', engine='pyarrow', index=False)
