@@ -3,8 +3,8 @@ from sqlalchemy.exc import OperationalError
 from sqlalchemy.types import Integer, VARCHAR, CHAR, DECIMAL, BIGINT
 import pandas as pd
 
-def db_conn(db, password, db_ip):
-    db_path = f'{db}:{password}@{db_ip}:3306/sof'
+def db_conn(id, password, db_ip, db):
+    db_path = f'{id}:{password}@{db_ip}:3306/{db}'
 
     engine = create_engine(f'mysql://{db_path}')
     
